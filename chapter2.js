@@ -31,4 +31,23 @@
 // console.log(result);
 //
 //
-for (let current = 20;)
+for (let current = 20; ; current += 1) {
+  if (current % 7 == 0) {
+    console.log(current);
+    break;
+  }
+}
+switch(prompt("What is the weather like?")){
+  case "rainy":
+    console.log("Remember to bring an umbrella.");
+    break;
+  case "sunny":
+    console.log("Dress lightly.");
+    break;
+  case "cloudy":
+    console.log("Go outside.");
+    break;
+  default:
+    console.log("Unkonw weather type!");
+    break;
+}
