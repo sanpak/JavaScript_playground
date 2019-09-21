@@ -137,17 +137,31 @@
 // }
 // console.log(findSolution(62));
 //Growing funciton
-function printFarmInventory(cows,chickens){
-  let cowString = String(cows);
-  while (cowString.length < 3){
-    cowString = "0" + cowString;
+// function printFarmInventory(cows,chickens){
+//   let cowString = String(cows);
+//   while (cowString.length < 3){
+//     cowString = "0" + cowString;
+//   }
+//   console.log(`${cowString} Cows`);
+//   let chickenString = String(chickens);
+//   while (chickenString.length < 3){
+//     chickenString = "0" + chickenString;
+//   }
+//   console.log(`${chickenString} chickens`);
+// }
+//
+// printFarmInventory(7,11);
+//growing function example
+function printZeroPaddedWithLabel(number,label){
+  let numberString = String(number);
+  while (numberString.length < 3) {
+    numberString = "0" + numberString;
   }
-  console.log(`${cowString} Cows`);
-  let chickenString = String(chickens);
-  while (chickenString.length < 3){
-    chickenString = "0" + chickenString;
-  }
-  console.log(`${chickenString} chickens`);
+  console.log(`${numberString} ${label}`);
 }
-
-printFarmInventory(7,11);
+function printFarmInventory(cows,chickens,pigs){
+  printZeroPaddedWithLabel(cows,"cows");
+  printZeroPaddedWithLabel(chickens,"chickens");
+  printZeroPaddedWithLabel(pigs,"pigs");
+}
+printFarmInventory(7,11,3);
