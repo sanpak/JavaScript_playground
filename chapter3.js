@@ -152,16 +152,23 @@
 //
 // printFarmInventory(7,11);
 //growing function example
-function printZeroPaddedWithLabel(number,label){
-  let numberString = String(number);
-  while (numberString.length < 3) {
-    numberString = "0" + numberString;
+// function printZeroPaddedWithLabel(number,label){
+//   let numberString = String(number);
+//   while (numberString.length < 3) {
+//     numberString = "0" + numberString;
+//   }
+//   console.log(`${numberString} ${label}`);
+// }
+// function printFarmInventory(cows,chickens,pigs){
+//   printZeroPaddedWithLabel(cows,"cows");
+//   printZeroPaddedWithLabel(chickens,"chickens");
+//   printZeroPaddedWithLabel(pigs,"pigs");
+// }
+// printFarmInventory(7,11,3);
+function zeroPad(number,width) {
+  let string = String(number);
+  while (string.length < 3){
+    string = "0" + string;
   }
-  console.log(`${numberString} ${label}`);
+  return string;
 }
-function printFarmInventory(cows,chickens,pigs){
-  printZeroPaddedWithLabel(cows,"cows");
-  printZeroPaddedWithLabel(chickens,"chickens");
-  printZeroPaddedWithLabel(pigs,"pigs");
-}
-printFarmInventory(7,11,3);
