@@ -60,4 +60,12 @@ let journal = [];
 function addEntry(events, squirrel){
   journal.push({events,squirrel});
 }
-addEntry("events", "squirrel");
+// addEntry("events", "squirrel");
+// journal.push()
+journal.push("2");
+console.log(journal);
+journal.push([2,1]);
+console.log(journal);
+journal.push({events:"1"});
+console.log(journal);
+console.log(journal[2].events);
