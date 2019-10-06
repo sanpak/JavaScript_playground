@@ -172,7 +172,37 @@
 // console.log(getTask());
 // rememberUrgently("Udemy");
 // console.log(todoList);
-array = [1,2,3,2,1];
-console.log(array.indexOf(2));
+// array = [1,2,3,2,1];
+// console.log(array.indexOf(2));
+//
+// console.log(array.lastIndexOf(2));
+array = [0,1,2,3,4];
 
-console.log(array.lastIndexOf(2));
+console.log(array.slice(2,4));
+
+console.log(array.slice(2));
+
+function remove(array,index) {
+  return array.slice(0,index).concat(array.slice(index + 1));
+}
+
+console.log(remove(["a","b","c","d","e"], 2));
+
+// function remove(array,index) {
+//   return array.slice(0,index) + (array.slice(index + 1));
+// }
+//
+// console.log(remove(["a","b","c","d","e"], 2));
+let kim = "Kim";
+kim.age = 88;
+console.log(kim.age);
+
+console.log("coconuts".slice(4,7));
+console.log("coconuts".indexOf("u"));
+console.log("one two three".indexOf("ee"));
+console.log("  okay \n ".trim());
+console.log(String(6).padStart(5, "10"));
+let sentence = "Secretarybirds specialize in stomping";
+let words = sentence.split(" ");
+console.log(words);
+console.log(words.join(". "));
