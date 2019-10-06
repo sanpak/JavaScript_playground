@@ -165,4 +165,8 @@ function testUnshift(element) {
   return array;
 }
 remember("laundry");
-remember("")
+remember("homework");
+remember("JavaScript");
+console.log(todoList);
+todoList.unshift(todoList.pop());
+console.log(todoList);
