@@ -193,16 +193,32 @@ console.log(remove(["a","b","c","d","e"], 2));
 // }
 //
 // console.log(remove(["a","b","c","d","e"], 2));
-let kim = "Kim";
-kim.age = 88;
-console.log(kim.age);
+// let kim = "Kim";
+// kim.age = 88;
+// console.log(kim.age);
+//
+// console.log("coconuts".slice(4,7));
+// console.log("coconuts".indexOf("u"));
+// console.log("one two three".indexOf("ee"));
+// console.log("  okay \n ".trim());
+// console.log(String(6).padStart(5, "10"));
+// let sentence = "Secretarybirds specialize in stomping";
+// let words = sentence.split(" ");
+// console.log(words);
+// console.log(words.join(". "));
+// console.log("LA".repeat(3));
+// let string = "abc";
+// console.log(string.length);
+// console.log(string[1]);
 
-console.log("coconuts".slice(4,7));
-console.log("coconuts".indexOf("u"));
-console.log("one two three".indexOf("ee"));
-console.log("  okay \n ".trim());
-console.log(String(6).padStart(5, "10"));
-let sentence = "Secretarybirds specialize in stomping";
-let words = sentence.split(" ");
-console.log(words);
-console.log(words.join(". "));
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    if (number > result) result = number;
+  }
+  return result;
+}
+// console.log(max());
+
+let numbers = [5,1,7];
+console.log(max(...numbers));
