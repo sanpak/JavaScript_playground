@@ -222,3 +222,5 @@ function max(...numbers) {
 
 let numbers = [5,1,7];
 console.log(max(...numbers));
+console.log(max(...[1,5,3,10,5]));
+console.log([1,...[4,3],2]);
