@@ -211,16 +211,50 @@ console.log(remove(["a","b","c","d","e"], 2));
 // console.log(string.length);
 // console.log(string[1]);
 
-function max(...numbers) {
-  let result = -Infinity;
-  for (let number of numbers) {
-    if (number > result) result = number;
-  }
-  return result;
-}
-// console.log(max());
+// function max(...numbers) {
+//   let result = -Infinity;
+//   for (let number of numbers) {
+//     if (number > result) result = number;
+//   }
+//   return result;
+// }
+// // console.log(max());
+//
+// let numbers = [5,1,7];
+// console.log(max(...numbers));
+// console.log(max(...[1,5,3,10,5]));
+// console.log([1,...[4,3],2]);
+//
+// function randomPointOnCircle(radius) {
+//   let angle = Math.random() * 2 * Math.PI;
+//   return {x: radius * Math.cos(angle),
+//           y: radius * Math.sin(angle)};
+// }
 
-let numbers = [5,1,7];
-console.log(max(...numbers));
-console.log(max(...[1,5,3,10,5]));
-console.log([1,...[4,3],2]);
+// console.log(randomPointOnCircle(2));
+//
+// console.log(Math.random());
+// console.log(Math.random());
+// console.log(Math.random());
+// console.log(Math.floor(Math.random() * 10));
+// console.log(Math.floor(3.04));
+//
+// console.log(Math.floor(100 * Math.random()));
+// console.log(Math.ceil(10.90));
+// console.log(Math.abs(-12));
+let {john} = {john:true, age: 30};
+console.log(john);
+let [m00,m01,m10,m11] = [1,2,3,4];
+console.log(m01);
+// JSON
+
+// {
+//   "squirrel": false,
+//   "events": ["work","touched tree","pizza","running"]
+// }
+let string = JSON.stringify({squirrel: false,
+                              events: ["weekend"]});
+let string2 = {squirrel: false, events:["weekend"]};
+console.log(string);
+console.log(JSON.parse(string).squirrel);
+console.log(string);
