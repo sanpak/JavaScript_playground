@@ -1,6 +1,8 @@
 let obj1 = {here: {is: "an"}, object: 2};
 let obj2 = {here: {is: "an"}, object: 2};
 
+console.log(obj1 === obj2);
+
 function findValue(obj) {
   let objkeys = Object.keys(obj);
   let objValues = Object.values(obj);
@@ -16,6 +18,7 @@ function findValue(obj) {
 // console.log(findValue(obj1));
 
 function deepEqual(obj1,obj2) {
+  let result = true;
   let obj1keys = Object.keys(obj1);
   let obj2keys = Object.keys(obj2);
   let obj1Values = Object.values(obj1);
@@ -24,20 +27,27 @@ function deepEqual(obj1,obj2) {
   if (obj1keys.length != obj2keys.length) {
     return false;
   }
-
+  for (let i = 0; i < obj1Values.length; i++) {
+    if (typeof(obj1Values[i]) != "object" && typeof(obj2Values[i]) != "object") {
+      if (obj1Values[i] != obj2Values[i]) {
+        return false;
+      }
+    }
+  }
   for (let i = 0; i < obj1Values.length; i++) {
     if (typeof(obj1Values[i]) == "object" && typeof(obj2Values[i]) == "object") {
-      return deepEqual(obj1Values[i],obj2Values[i]);
+      result = deepEqual(obj1Values[i],obj2Values[i]);
       //test
       // console.log(obj1Values[i],obj2Values[i]);
-    } else if (obj1Values[i] != obj2Values[i])
+    }
+
   }
 
   // console.log(obj1Values[0],obj2Values[0]);
   if (obj1Values[0] != obj2Values[0]) {
     return false;
   }
-  return true;
+  return result;
 }
 
 console.log(deepEqual(obj1,obj2));
