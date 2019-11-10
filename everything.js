@@ -7,10 +7,28 @@ function every(array,test){
 }
 //version 2 with some method
 function every2(array,test) {
-  if (array.some(test)) return true;
-  return false;
+  let result = true;
+  array.some( function (element) {
+    if (!test(element)) {
+      result = false;
+    }
+  });
+  return result;
 }
 
+
+
+function multiples2_5(n){
+  let count = 0;
+  for (let i = 0; i <= n; i++) {
+    if (!(i % 2 == 0) && !(i % 5 == 0)){
+      count ++;
+    }
+  }
+  return count;
+}
+
+console.log(multiples2_5(1000));
 
 console.log("every with loop");
 console.log(every([1, 3, 5], n => n < 10));
