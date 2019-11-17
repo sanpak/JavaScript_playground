@@ -16,6 +16,8 @@ function every2(array,test) {
   return result;
 }
 
+//provided
+
 
 
 function multiples2_5(n){
