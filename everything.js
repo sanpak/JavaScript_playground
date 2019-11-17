@@ -16,9 +16,14 @@ function every2(array,test) {
   return result;
 }
 
-//provided
+//provided by exercise solution
 
+function every3(array,test) {
+  return !array.some(element => !test(element));
+}
 
+console.log(every([1,3,5], n=> n < 10));
+console.log(every3([2,4,16], n => n < 10));
 
 function multiples2_5(n){
   let count = 0;
@@ -30,19 +35,19 @@ function multiples2_5(n){
   return count;
 }
 
-console.log(multiples2_5(1000));
-
-console.log("every with loop");
-console.log(every([1, 3, 5], n => n < 10));
-
-console.log(every([2, 4, 16], n => n < 10));
-
-console.log(every([], n => n < 10));
-
-console.log("___________________________");
-console.log("every2 with some method");
-console.log(every2([1, 3, 5], n => n < 10));
-
-console.log(every2([2, 4, 16], n => n < 10));
-
-console.log(every2([], n => n < 10));
+// console.log(multiples2_5(1000));
+//
+// console.log("every with loop");
+// console.log(every([1, 3, 5], n => n < 10));
+//
+// console.log(every([2, 4, 16], n => n < 10));
+//
+// console.log(every([], n => n < 10));
+//
+// console.log("___________________________");
+// console.log("every2 with some method");
+// console.log(every2([1, 3, 5], n => n < 10));
+//
+// console.log(every2([2, 4, 16], n => n < 10));
+//
+// console.log(every2([], n => n < 10));
