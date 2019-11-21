@@ -21,3 +21,11 @@ normalize.call({coords: [0,2,3], length: 5});
 let empty = {};
 console.log(empty.toString);
 console.log(empty.toString());
+
+console.log(Object.getPrototypeOf({}) == Object.prototype);
+
+console.log(Object.getPrototypeOf({}));
+
+console.log(Object.getPrototypeOf("asd"));
+console.log(Object.prototype);
+console.log({}.toString);
