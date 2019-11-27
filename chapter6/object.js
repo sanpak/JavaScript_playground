@@ -45,32 +45,60 @@ let protoRabbit = {
 // let killerRabbit = Object.create(protoRabbit);
 // killerRabbit.type = "Killer";
 // killerRabbit.speak("SKREEE!");
-
-function makeRabbit(type) {
-  let rabbit = Object.create(protoRabbit);
-  rabbit.type = type;
-  return rabbit;
-}
-
-console.log(makeRabbit("killerRabbit"));
-
-function Rabbit(type) {
-  this.type = type;
-}
-
-Rabbit.prototype.speak = function(line) {
-  console.log(`The ${this.type} rabbit says '${line}'`);
-};
-
-// Rabbit.speak = function(line) {
+//
+// function makeRabbit(type) {
+//   let rabbit = Object.create(protoRabbit);
+//   rabbit.type = type;
+//   return rabbit;
+// }
+//
+// console.log(makeRabbit("killerRabbit"));
+//
+// function Rabbit(type) {
+//   this.type = type;
+// }
+//
+// Rabbit.prototype.speak = function(line) {
 //   console.log(`The ${this.type} rabbit says '${line}'`);
 // };
+//
+// // Rabbit.speak = function(line) {
+// //   console.log(`The ${this.type} rabbit says '${line}'`);
+// // };
+//
+// let weirdRabbit = new Rabbit("weird");
+// console.log(Object.getPrototypeOf(weirdRabbit));
+// console.log(weirdRabbit.speak("hello"));
+// console.log(weirdRabbit);
+//
+// console.log(Object.getPrototypeOf(Rabbit) == Function.prototype);
+// console.log(Object.getPrototypeOf(Rabbit));
+// console.log(Object.getPrototypeOf(weirdRabbit));
 
-let weirdRabbit = new Rabbit("weird");
-console.log(Object.getPrototypeOf(weirdRabbit));
-console.log(weirdRabbit.speak("hello"));
-console.log(weirdRabbit);
+class Rabbit {
+  constructor(type) {
+    this.type = type;
+  }
+  speak(line) {
+    console.log(`The ${this.type} rabbit says '${line}'`);
+  }
+}
+let killerRabbit = new Rabbit("killer");
+let blackRabbit = new Rabbit("black");
 
-console.log(Object.getPrototypeOf(Rabbit) == Function.prototype);
-console.log(Object.getPrototypeOf(Rabbit));
-console.log(Object.getPrototypeOf(weirdRabbit));
+console.log(killerRabbit);
+console.log(blackRabbit);
+let object = new class { getWord() {return "hello"; }};
+console.log(object.getWord());
+Rabbit.prototype.teeth = "small";
+console.log(killerRabbit.teeth);
+killerRabbit.teeth = "long,sharp,bllody";
+console.log(killerRabbit.teeth);
+console.log(blackRabbit.teeth);
+console.log(Rabbit.prototype.teeth);
+console.log(Array.prototype.toString);
+console.log(Object.prototype.toString);
+
+console.log(Array.prototype.toString == Object.prototype.toString);
+console.log([1,2].toString());
+console.log(Object.prototype.toString.call([1,2]));
