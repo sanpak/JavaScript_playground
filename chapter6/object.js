@@ -156,8 +156,18 @@ a = "d"
 
 
 let sym2 = Symbol("name");
-let sym2 = Symbol("name3")
+
 Rabbit.prototype[sym2] = "acd";
 console.log(sym2);
 console.log(killerRabbit[sym2]);
 console.log([1,2][toStringSymbol]());
+
+let stringObject = {
+  [toStringSymbol]() { return "a jute rope"; }
+};
+
+console.log(stringObject[toStringSymbol]());
+
+let okIterator = "OK"[Symbol.iterator]();
+console.log(okIterator);
+console.log(okIterator.next());
