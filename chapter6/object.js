@@ -137,7 +137,27 @@ console.log(String(blackRabbit));
 
 console.log(Object.getPrototypeOf(1));
 
-Number.prototype.myString = function() {
-  return this.toString() + " is a number";
+// Number.prototype.myString = function() {
+//   return this.toString() + " is a number";
+// };
+// console.log((12).myString());
+let sym = Symbol("name");
+console.log(sym == Symbol("name"));
+Rabbit.prototype[sym] = 55;
+console.log(blackRabbit[sym]);
+console.log(killerRabbit[sym]);
+console.log(sym);
+const toStringSymbol = Symbol("toString");
+Array.prototype[toStringSymbol] = function() {
+  return `${this.length} cm of blue yarn`;
 };
-console.log((12).myString());
+let a = "b";
+a = "d"
+
+
+let sym2 = Symbol("name");
+let sym2 = Symbol("name3")
+Rabbit.prototype[sym2] = "acd";
+console.log(sym2);
+console.log(killerRabbit[sym2]);
+console.log([1,2][toStringSymbol]());
