@@ -251,5 +251,10 @@ class Temperature {
   }
 }
 
-let temp = new Temperature(22);
+// let temp = new Temperature(22);
+// console.log(temp.fahrenheit);
+// console.log(temp.fahrenheit);
+// temp.fahrenheit = 86;
+// console.log(temp.celsius);
+let temp = Temperature.fromFahrenheit(100);
 console.log(temp.fahrenheit);
