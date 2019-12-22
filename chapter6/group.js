@@ -16,13 +16,20 @@ class Group {
     return this.content;
   }
 
+  //solution from book
+  // if (!this.has(value)) {
+    //this.members.push(value);
+//}
   has(value) {
     if (this.content.indexOf(value) == -1) {
       return false;
     }
     return true;
   }
-
+  //solution from book
+  //has(value) {
+    //return this.members.includes(value);
+//}
   static from(object) {
     let addElement = new Group;
     for (let element of object) {
