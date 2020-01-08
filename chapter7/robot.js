@@ -25,11 +25,9 @@ function buildGraph(edges) {
 }
 
 const roadGraph = buildGraph(roads);
-console.log(roadGraph);
-
 
 class VillageState {
-  constructor(place,parcels) {
+  constructor(place, parcels) {
     this.place = place;
     this.parcels = parcels;
   }
@@ -46,8 +44,12 @@ class VillageState {
   }
 }
 
-function runRobot(state, robot, memory) {
-  for (let turn = 0; turn++) {
+let object = Object.freeze({value: 5});
+object.value = 10;
+console.log(object.value);
+
+function runRobot(state, robot, memory){
+  for (let turn = 0;; turn++) {
     if (state.parcels.length == 0) {
       console.log(`Done in ${turn} turns`);
       break;
@@ -59,18 +61,46 @@ function runRobot(state, robot, memory) {
   }
 }
 
-let first = new VillageState(
-  "Post Office",
-  [{place: "Post Office", address: "Alice's House"}]
-);
 
-let next = first.move("Alice's House");
-console.log(next.place);
-console.log(next.parcels);
-console.log(first.place);
+function randomPick(array) {
+  let choice = Math.floor(Math.random() * array.length);
+  return array[choice];
+}
 
-let object = Object.freeze({value: 5});
-object.value = 10;
-console.log(object.value);
+function randomRobot(state) {
+  return {direction: randomPick(roadGraph[state.place])};
+}
+
+VillageState.random = function(parcelCount = 5) {
+  let parcels = [];
+  for (let i = 0; i < parcelCount; i++){
+    let address = randomPick(Object.keys(roadGraph));
+    let place;
+    do {
+      place = randomPick(Object.keys(roadGraph));
+    } while (place == address);
+    parcels.push({place,address});
+  }
+  return new VillageState("Post Office", parcels);
+};
+
+runRobot(VillageState.random(),randomRobot);
+
+// let first = new VillageState(
+//   "Post Office",
+//   [{place: "Post Office", address: "Alice's House"}]
+// );
+//
+// console.log(first);
+// //
+// let next = first.move("Alice's House");
+// console.log(next);
+// console.log(next.place);
+// console.log(next.parcels);
+// console.log(first.place);
+
+// let object = Object.freeze({value: 5});
+// object.value = 10;
+// console.log(object.value);
 
 // console.log(next.place);
