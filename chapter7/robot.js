@@ -46,21 +46,21 @@ class VillageState {
   }
 }
 
-// let first = new VillageState(
-//   "Farm",
-//   [{place: "Farm", address: "Ernie's House"}]
-// );
-//
-// console.log(first);
-// let next = first.move("Grete's House");
-// console.log(next);
-// let nextNext = next.move("Ernie's House");
-// console.log(nextNext);
+let first = new VillageState(
+  "Farm",
+  [{place: "Farm", address: "Ernie's House"}]
+);
+
+console.log(first);
+let next = first.move("Grete's House");
+console.log(next);
+let nextNext = next.move("Ernie's House");
+console.log(nextNext);
 
 
-// let object = Object.freeze({value: 5});
-// object.value = 10;
-// console.log(object.value);
+let object = Object.freeze({value: 5});
+object.value = 10;
+console.log(object.value);
 
 
 function runRobot(state, robot, memory){
@@ -133,10 +133,10 @@ function findRoute(graph, from, to) {
   }
 }
 
-// console.log(findRoute(roadGraph, "Alice's House", "Bob's House"));
-// runRobot(VillageState.random(),routeRobot, []);
+console.log(findRoute(roadGraph, "Alice's House", "Bob's House"));
+runRobot(VillageState.random(),routeRobot, []);
 
-// console.log(findRoute(roadGraph, "Shop", "Farm"));
+console.log(findRoute(roadGraph, "Shop", "Farm"));
 
 
 function goalOrientedRobot({place, parcels}, route) {
@@ -151,21 +151,21 @@ function goalOrientedRobot({place, parcels}, route) {
   return {direction: route[0], memory: route.slice(1)};
 }
 
-// runRobot(VillageState.random(), goalOrientedRobot, []);
+runRobot(VillageState.random(), goalOrientedRobot, []);
 
 
-// let first = new VillageState(
-//   "Post Office",
-//   [{place: "Post Office", address: "Alice's House"}]
-// );
+let first = new VillageState(
+  "Post Office",
+  [{place: "Post Office", address: "Alice's House"}]
+);
+
+console.log(first);
 //
-// console.log(first);
-// //
-// let next = first.move("Alice's House");
-// console.log(next);
-// console.log(next.place);
-// console.log(next.parcels);
-// console.log(first.place);
+let next = first.move("Alice's House");
+console.log(next);
+console.log(next.place);
+console.log(next.parcels);
+console.log(first.place);
 
 // let object = Object.freeze({value: 5});
 // object.value = 10;
