@@ -43,3 +43,14 @@ function numberToString(n, base = 10) {
   return sign + result;
 }
 console.log(numberToString(12));
+
+
+
+function promptNumber(question) {
+  let result = Number(prompt(question));
+  if (Number.isNaN(result)) return null;
+  else return result;
+}
+
+
+console.log(Number.isNaN(0/0));
