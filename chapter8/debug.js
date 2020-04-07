@@ -54,3 +54,4 @@ function promptNumber(question) {
 
 
 console.log(Number.isNaN(0/0));
+console.log(promptNumber("How many tree do you see?"));
