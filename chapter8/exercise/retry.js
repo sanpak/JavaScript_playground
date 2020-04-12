@@ -24,13 +24,13 @@ function reliableMultiply(a,b) {
   }
 }
 
-console.log(reliableMultiply(2,3));
+
 
 
 //recursion
 function reliableMultiply(a,b) {
   try {
-    return primitiveMultiply(a,b);
+    primitiveMultiply(a,b);
   } catch (e) {
     if (e instanceof MultiplicatorUnitFailure) {
       console.log("something wrong , " + e);
@@ -42,7 +42,7 @@ function reliableMultiply(a,b) {
 
 
 }
-
+console.log(reliableMultiply(2,3));
 
 // function reliableMultiply(a, b) {
 //   if (primitiveMultiply(a,b))
