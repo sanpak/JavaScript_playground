@@ -9,9 +9,9 @@ const box = {
   }
 };
 function withBoxUnlocked(body){
-  box.unlock();
+  if (box.locked) { box.unlock(); }
   try {
-    return body;
+    body;
   } finally {
     box.lock();
   }
