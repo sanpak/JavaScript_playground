@@ -17,5 +17,9 @@
 // console.log(/'\d*'/.test("'123'"));
 // console.log(/'\d*'/.test("''"));
 console.log("___________try star____________");
-let testStar = /d*/;
+let testStar = /\d*/;
 console.log(testStar.test("asdfasdf"));
+console.log(/\*/.test(""));
+console.log("_______try question____________");
+let neighbor = /neighbou?r/;
+console.log(neighbor.test("neighbor"));
