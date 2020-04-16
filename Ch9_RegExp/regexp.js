@@ -34,3 +34,8 @@ let caseSensitive = /Bo+(Ho+)+/;
 console.log(cartoonCrying.test("Booohoohoo"));
 console.log("__________case sensitive___________");
 console.log(cartoonCrying.test("BoHooHo"));
+
+console.log("_________match method____________");
+let match = /\d+/.exec("one two 100");
+console.log(match);
+console.log(match.index);
