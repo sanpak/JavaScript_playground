@@ -47,3 +47,8 @@ let quotedText = /'([^']*)'/;
 // console.log(quotedText.exec("She said 'hello'"));
 console.log(quotedText.exec("She 'said he'llo 'John'"));
 console.log("She 'said he'llo 'John'".match(quotedText));
+
+console.log("_______________question mark___________");
+console.log(/bad(ly)?/.exec("bad"));
+console.log(/(\d)+/.exec("1234"));
+console.log("___________Date Class________________");
