@@ -39,3 +39,11 @@ console.log("_________exec method____________");
 let match = /\d+/.exec("one two 100");
 console.log(match);
 console.log(match.index);
+console.log("____________match method_____________");
+console.log("one two 100".match(/\d+/));
+
+console.log("______________subexpression group___________");
+let quotedText = /'([^']*)'/;
+// console.log(quotedText.exec("She said 'hello'"));
+console.log(quotedText.exec("She 'said he'llo 'John'"));
+console.log("She 'said he'llo 'John'".match(quotedText));
