@@ -23,3 +23,7 @@ console.log(/\*/.test(""));
 console.log("_______try question____________");
 let neighbor = /neighbou?r/;
 console.log(neighbor.test("neighbor"));
+
+console.log("________________Braces_______________");
+let dateTime = /\d{1,2}-\d{1,2}-\d{4} \d{1,2}:\d{2}/;
+console.log(dateTime.test("1-30-2003 8:45"));
