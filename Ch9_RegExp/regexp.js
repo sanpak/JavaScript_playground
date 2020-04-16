@@ -29,5 +29,8 @@ let dateTime = /\d{1,2}-\d{1,2}-\d{4} \d{1,2}:\d{2}/;
 console.log(dateTime.test("1-30-2003 8:45"));
 
 console.log("_________Grouping Subexpressions____________");
-let cartoonCrying = /boo+(hoo+)+/i;
-console.log(cartoonCrying.test("Booohoho"));
+let cartoonCrying = /boo+(hoo+)+/i; //i means case insensitive
+let caseSensitive = /Bo+(Ho+)+/;
+console.log(cartoonCrying.test("Booohoohoo"));
+console.log("__________case sensitive___________");
+console.log(cartoonCrying.test("BoHooHo"));
