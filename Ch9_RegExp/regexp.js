@@ -35,7 +35,7 @@ console.log(cartoonCrying.test("Booohoohoo"));
 console.log("__________case sensitive___________");
 console.log(cartoonCrying.test("BoHooHo"));
 
-console.log("_________match method____________");
+console.log("_________exec method____________");
 let match = /\d+/.exec("one two 100");
 console.log(match);
 console.log(match.index);
