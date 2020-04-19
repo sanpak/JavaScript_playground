@@ -52,3 +52,21 @@ console.log("_______________question mark___________");
 console.log(/bad(ly)?/.exec("bad"));
 console.log(/(\d)+/.exec("1234"));
 console.log("___________Date Class________________");
+console.log(new Date());
+console.log(new Date(2009,11,9));
+console.log(new Date(2009,11,9,12,59,59,999));
+console.log(new Date(2013, 11, 19).getTime());
+console.log(new Date(1387429200000));
+console.log(Date.now());
+
+console.log("_______________getDate()_________________");
+function getDate(string) {
+  let [_, month, day, year] = /(\d{1,2})-(\d{1,2})-(\d{4})/.exec(string);
+  return new Date(year, month - 1, day);
+}
+function getDate(string) {
+  let [_, month, day, year] = /(\d{1,2})-(\d{1,2})-(\d{4})/.exec(string);
+  return [_, month, day, year];
+}
+console.log(getDate("1-30-2003"));
+console.log(/(\d{1,2})-(\d{1,2})-(\d{4})/.exec("1-20-3002"));
