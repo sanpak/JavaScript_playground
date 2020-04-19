@@ -70,3 +70,12 @@ function getDate(string) {
 }
 console.log(getDate("1-30-2003"));
 console.log(/(\d{1,2})-(\d{1,2})-(\d{4})/.exec("1-20-3002"));
+console.log(getDate("100-1-30000"));
+console.log();
+console.log("__________word boundaries____________");
+console.log(/cat/.test("concatenate"));
+console.log(/\bcat0\b/.test("cat0"));
+console.log("_____________Pipe_____________");
+let animalCount = /\b\d+ (pig|cow|chicken)s?\b/;
+console.log(animalCount.test("2342 cow"));
+console.log(animalCount.test("15 pigchickens"));
