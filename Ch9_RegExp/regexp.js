@@ -119,3 +119,9 @@ function stripComments(code) {
   return code.replace(/\/\/.*|\/\*[^]*?\*\//g, "");
 }
 console.log(stripComments("1 /* a */+/* b */ 1"));
+
+console.log("_______________dynamically_________creatiing RegExp Obj________ ");
+let name = "harry";
+let text = "Harry is a suspicious character.";
+let regexp = new RegExp("\\b(" + name + ")\\b", "gi");
+console.log(text.replace(regexp, "_$1_"));
