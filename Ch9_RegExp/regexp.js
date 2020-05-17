@@ -125,3 +125,7 @@ let name = "harry";
 let text = "Harry is a suspicious character.";
 let regexp = new RegExp("\\b(" + name + ")\\b", "gi");
 console.log(text.replace(regexp, "_$1_"));
+let name = "dea+hl[]rd";
+let text = "This dea+hl[]rd guy is super annoying.";
+let escaped = name.replace(/[\\[.+*?()]])
+console.log("abcd");
